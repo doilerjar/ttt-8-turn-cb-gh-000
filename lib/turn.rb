@@ -1,3 +1,8 @@
+def turn(board)
+  
+end
+
+
 # code your #valid_move? method here
 def valid_move?(board, index)
   if index.between?(0,8) && !position_taken?(board, index)
@@ -6,6 +11,7 @@ def valid_move?(board, index)
     return false
   end
 end
+
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
@@ -16,6 +22,7 @@ def position_taken?(board, index)
   end
 end
 
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -24,10 +31,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+
 # code your input_to_index and move method here!
 def input_to_index(input)
   return input.to_i - 1
 end
+
 
 def move(board, index, value="X")
   board[index] = value
